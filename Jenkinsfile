@@ -22,6 +22,7 @@ pipeline {
       steps{
         echo "Building Docker Image"
         script {
+          sudo su
           dockerImage = docker.build registry + ":$BUILD_NUMBER"
         }
       }
