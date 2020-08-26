@@ -9,7 +9,7 @@ pipeline {
     stage ('Build') {
       steps{
         echo "Building Project"
-        sh 'mvn install -DskipTests=true'
+        sh 'sudo mvn install -DskipTests=true'
       }
     }
     stage ('Archive') {
